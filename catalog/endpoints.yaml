@@ -16,27 +16,35 @@ endpoints:
   access: html_scrape
 - id: historical_policy_xlsx
   method: GET
-  url: https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/sheets/historical_policy_interest_rates.xlsx
+  url: https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/about/historical_policy_interest_rates.xlsx
   path: /historical_policy_interest_rates.xlsx
-  summary: Historical SDFR/SLFR/OPR Excel tip.
+  summary: Historical SDFR/SLFR/OPR Excel tip. Path moved from statistics/sheets/ to about/ (verified 2026-09-14).
   access: html_scrape
 - id: eresearch_tbill_6169
   method: GET
   url: https://www.cbsl.gov.lk/eresearch/en_US/viewReport/6169
   path: /eresearch/.../6169
-  summary: Secondary market T-bill yields (91/182/364).
-  access: json_api
+  summary: 'PARK — the entire /eresearch/ viewReport subsystem is gone (base path
+    /eresearch/en_US now 404s too, not just this report ID). Checked the current
+    Weekly/Daily Indicators pages for a successor JSON endpoint; found none — they
+    no longer make any eresearch/viewReport network calls. No confirmed replacement
+    source for T-bill secondary market yields as of 2026-09-14; needs fresh
+    research, not a URL/ID swap.'
+  status: parked
+  access: parked
 - id: eresearch_awpr_6277
   method: GET
   url: https://www.cbsl.gov.lk/eresearch/en_US/viewReport/6277
   path: /eresearch/.../6277
-  summary: Weekly AWPR series.
-  access: json_api
+  summary: 'PARK — same eresearch subsystem retirement as eresearch_tbill_6169.
+    No confirmed replacement source for weekly AWPR as of 2026-09-14.'
+  status: parked
+  access: parked
 - id: payments_bulletin_index
   method: GET
-  url: https://www.cbsl.gov.lk/en/payments-and-settlements/payments-bulletin
-  path: /en/payments-and-settlements/payments-bulletin
-  summary: Payments bulletin PDF index.
+  url: https://www.cbsl.gov.lk/en/publications/other-publications/statistical-publications/payments-bulletin
+  path: /en/publications/other-publications/statistical-publications/payments-bulletin
+  summary: Payments bulletin PDF index. Path restructured under /en/publications/... (verified 2026-09-14).
   access: pdf_document
 - id: fx_buying_selling_html
   method: GET
