@@ -1,5 +1,5 @@
 {
-  "sha256": "9259564779eb7edf0f06f0656525b0dd1cc893e153e79b48e326dd9a0b3abe95",
+  "sha256": "6b924ce89d0130b393adebf6635dadce372bef9fcce722a80dae4e0d42ccf99e",
   "endpoint_count": 6,
   "endpoints": {
     "eresearch_awpr_6277": {
@@ -7,9 +7,9 @@
       "method": "GET",
       "path": "/eresearch/.../6277",
       "url": "https://www.cbsl.gov.lk/eresearch/en_US/viewReport/6277",
-      "status": "live",
-      "access": "json_api",
-      "summary": "Weekly AWPR series.",
+      "status": "parked",
+      "access": "parked",
+      "summary": "PARK \u2014 same eresearch subsystem retirement as eresearch_tbill_6169. No confirmed replacement source for weekly AWPR as of 2026-09-14.",
       "pagination": null
     },
     "eresearch_tbill_6169": {
@@ -17,9 +17,9 @@
       "method": "GET",
       "path": "/eresearch/.../6169",
       "url": "https://www.cbsl.gov.lk/eresearch/en_US/viewReport/6169",
-      "status": "live",
-      "access": "json_api",
-      "summary": "Secondary market T-bill yields (91/182/364).",
+      "status": "parked",
+      "access": "parked",
+      "summary": "PARK \u2014 the entire /eresearch/ viewReport subsystem is gone (base path /eresearch/en_US now 404s too, not just this report ID). Checked the current Weekly/Daily Indicators pages for a successor JSON endpoint; found none \u2014 they no longer make any eresearch/viewReport network calls. No confirmed replacement source for T-bill secondary market yields as of 2026-09-14; needs fresh research, not a URL/ID swap.",
       "pagination": null
     },
     "fx_buying_selling_html": {
@@ -36,20 +36,20 @@
       "id": "historical_policy_xlsx",
       "method": "GET",
       "path": "/historical_policy_interest_rates.xlsx",
-      "url": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/sheets/historical_policy_interest_rates.xlsx",
+      "url": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/about/historical_policy_interest_rates.xlsx",
       "status": "live",
       "access": "html_scrape",
-      "summary": "Historical SDFR/SLFR/OPR Excel tip.",
+      "summary": "Historical SDFR/SLFR/OPR Excel tip. Path moved from statistics/sheets/ to about/ (verified 2026-09-14).",
       "pagination": null
     },
     "payments_bulletin_index": {
       "id": "payments_bulletin_index",
       "method": "GET",
-      "path": "/en/payments-and-settlements/payments-bulletin",
-      "url": "https://www.cbsl.gov.lk/en/payments-and-settlements/payments-bulletin",
+      "path": "/en/publications/other-publications/statistical-publications/payments-bulletin",
+      "url": "https://www.cbsl.gov.lk/en/publications/other-publications/statistical-publications/payments-bulletin",
       "status": "live",
       "access": "pdf_document",
-      "summary": "Payments bulletin PDF index.",
+      "summary": "Payments bulletin PDF index. Path restructured under /en/publications/... (verified 2026-09-14).",
       "pagination": null
     },
     "plrates_html": {
@@ -62,6 +62,5 @@
       "summary": "Policy rates page (OPR / corridor context).",
       "pagination": null
     }
-  },
-  "updated": "2026-07-20"
+  }
 }

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-14
+
+- **Changed** `eresearch_awpr_6277`
+- **Changed** `eresearch_tbill_6169`
+- **Changed** `historical_policy_xlsx`
+- **Changed** `payments_bulletin_index`
+
 ## 2026-07-20
 
 - **Changed** `eresearch_awpr_6277` (GET `/eresearch/.../6277` · access `json_api`)
